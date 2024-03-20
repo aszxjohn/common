@@ -35,9 +35,8 @@ public enum ClientStatusEnum {
 	private final String description;
 	
 	public static ClientStatusEnum getClientStatusEnum(int clientStatus) {
-	    Optional<ClientStatusEnum> statusEnum = Arrays.stream(values())
-	            .filter(vn -> vn.getStatus() == clientStatus)
-	            .findFirst();
-	    return statusEnum.isPresent() ? statusEnum.get() : null;
+		Optional<ClientStatusEnum> statusEnum = Arrays.stream(values()).filter(vn -> vn.getStatus() == clientStatus)
+				.findFirst();
+		return statusEnum.isPresent() ? statusEnum.get() : null;
 	}
 }
